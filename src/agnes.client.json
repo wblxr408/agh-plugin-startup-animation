@@ -1,0 +1,10 @@
+{
+  "client": {
+    "id": "startup-animation",
+    "entry": "./client.js",
+    "styles": ["./intro.css"],
+    "lifetime": "profile",
+    "slotCatalogVersion": "dsh-client-slots/v1",
+    "slots": ["shell.overlay"]
+  }
+}
