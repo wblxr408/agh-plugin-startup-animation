@@ -1,77 +1,65 @@
 {
   "name": "@wblxr408/startup-animation",
-  "version": "0.3.0",
-  "type": "module",
+  "version": "0.4.0",
   "license": "Apache-2.0",
-  "engines": {
-    "node": ">=24.10"
-  },
-  "exports": "./index.mjs",
-  "files": [
-    "index.mjs",
-    "src",
-    "README.md",
-    "LICENSE",
-    "agh.market.json"
-  ],
-  "peerDependencies": {
-    "react": "18.3.1"
-  },
-  "agnes": {
-    "provides": [
-      "ui"
-    ],
-    "plugins": [
-      {
-        "id": "ext:@wblxr408/startup-animation/main",
-        "export": "main",
-        "apiRange": "^5.0.0",
-        "runtime": "in-process",
-        "capabilities": {
-          "ui": true
-        },
-        "metadata": {
-          "displayName": "Agnes startup animation",
-          "summary": "Plays a short, skippable intro when the Web workbench loads.",
-          "description": "A terminal mark resolves into a light technical plate, orbital lockup and Agnes Harness signature.",
-          "locales": {
-            "zh-CN": {
-              "displayName": "Agnes 开场动画",
-              "summary": "工作台加载时播放可跳过的开场动画。",
-              "description": "终端字符标志、浅色技术档案、环形扫描与 Agnes Harness 品牌揭幕。"
-            }
-          }
-        }
-      }
-    ],
-    "clientDescriptors": [
-      {
-        "rowId": "ext:@wblxr408/startup-animation/main",
-        "path": "./src/agnes.client.json"
-      }
-    ],
-    "metadata": {
-      "displayName": "Agnes startup animation",
-      "summary": "A skippable intro for the Agnes Web workbench.",
-      "description": "A short Agnes Harness brand sequence played in the Web shell overlay.",
-      "locales": {
-        "zh-CN": {
-          "displayName": "Agnes 开场动画",
-          "summary": "Agnes Web 工作台的可跳过开场。",
-          "description": "通过 Web 外壳的覆盖层播放 Agnes Harness 品牌动效。"
-        }
-      }
-    }
-  },
+  "description": "Configuration bundle. Install and authorize the separate runtime for AGH Startup Animation.",
   "repository": {
     "type": "git",
     "url": "https://github.com/wblxr408/agh-plugin-startup-animation"
   },
-  "author": "wblxr408",
-  "keywords": [
-    "agh-plugin",
-    "agnes-harness",
-    "startup-animation",
-    "web-workbench"
-  ]
+  "files": [
+    "LICENSE",
+    "README.md",
+    "agh.market.json"
+  ],
+  "agnes": {
+    "provides": [
+      "bundle"
+    ],
+    "metadata": {
+      "displayName": "AGH Startup Animation",
+      "summary": "Configuration bundle. Install and authorize the separate runtime for AGH Startup Animation.",
+      "description": "Reload the AGH Web workbench to see or skip the intro.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "AGH 开场动画",
+          "summary": "配置 Bundle。AGH 开场动画功能由单独安装和授权的运行组件提供。",
+          "description": "刷新 AGH Web 工作台即可观看或跳过开场动画。"
+        }
+      }
+    },
+    "bundles": {
+      "guide": {
+        "profile": {
+          "toolPolicy": {
+            "readOnly": true
+          }
+        },
+        "presets": {
+          "market-guide": {
+            "name": "market-guide",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "AGH Startup Animation Setup",
+            "zh-CN": "AGH 开场动画配置说明"
+          },
+          "description": {
+            "en": "Configuration bundle. Install and authorize the separate runtime for AGH Startup Animation.",
+            "zh-CN": "配置 Bundle。AGH 开场动画功能由单独安装和授权的运行组件提供。"
+          },
+          "preset": "market-guide",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "Explain how to set up AGH Startup Animation in AGH. The owner installs and authorizes its separate runtime. Reload the AGH Web workbench to see or skip the intro.",
+              "zh-CN": "请说明如何在 AGH 中配置AGH 开场动画。由所有者单独安装和授权运行组件。刷新 AGH Web 工作台即可观看或跳过开场动画。"
+            }
+          }
+        }
+      }
+    }
+  }
 }
