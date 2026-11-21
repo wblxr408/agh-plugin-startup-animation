@@ -5,7 +5,7 @@
 安装已构建的 Agnes Harness 后，运行：
 
 ```powershell
-agh plugins add git:https://github.com/wblxr408/agh-plugin-startup-animation#v0.3.0
+agh plugins add git:https://github.com/wblxr408/agh-plugin-startup-animation#runtime-v0.3.0
 ```
 
 在安装预览中确认来源和 UI 权限，然后打开或刷新 Web 工作台。可用 Esc 或右下角的「跳过开场」提前进入工作台。系统开启「减少动态效果」或 Canvas 不可用时，会短暂显示静态字标。在插件页禁用开场动画可关闭自动播放。

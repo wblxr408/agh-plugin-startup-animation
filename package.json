@@ -1,5 +1,5 @@
 {
-  "name": "@wblxr408/startup-animation",
+  "name": "@wblxr408/startup-animation-runtime",
   "version": "0.3.0",
   "type": "module",
   "license": "Apache-2.0",
@@ -23,7 +23,7 @@
     ],
     "plugins": [
       {
-        "id": "ext:@wblxr408/startup-animation/main",
+        "id": "ext:@wblxr408/startup-animation-runtime/main",
         "export": "main",
         "apiRange": "^5.0.0",
         "runtime": "in-process",
@@ -46,7 +46,7 @@
     ],
     "clientDescriptors": [
       {
-        "rowId": "ext:@wblxr408/startup-animation/main",
+        "rowId": "ext:@wblxr408/startup-animation-runtime/main",
         "path": "./src/agnes.client.json"
       }
     ],
