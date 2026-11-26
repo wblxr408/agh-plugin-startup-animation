@@ -5,6 +5,20 @@
     "styles": ["./intro.css"],
     "lifetime": "profile",
     "slotCatalogVersion": "dsh-client-slots/v1",
-    "slots": ["shell.overlay"]
+    "slots": ["shell.overlay"],
+    "homeEntries": [
+      {
+        "id": "startup-animation-guide",
+        "placement": "secondary",
+        "navigation": {
+          "title": "Startup animation guide: The intro automatically covers the workbench for about 5 seconds each time a page opens or reloads. Choose Skip intro or press Escape to dismiss it. Reduced motion shows a brief static logo.",
+          "titles": {
+            "zh-CN": "开场动画指南：每次打开或刷新工作台页面时，开场动画会自动覆盖工作台约 5 秒。可以选择「跳过开场」或按 Esc 提前关闭。开启减少动态效果时只会短暂显示静态标志。"
+          },
+          "icon": "play",
+          "order": 50
+        }
+      }
+    ]
   }
 }

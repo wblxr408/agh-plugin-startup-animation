@@ -1,6 +1,6 @@
 {
   "name": "@wblxr408/startup-animation-runtime",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
   "license": "Apache-2.0",
   "engines": {
@@ -21,6 +21,14 @@
     "provides": [
       "ui"
     ],
+    "application": {
+      "id": "startup-animation",
+      "presentation": {
+        "navigation": {
+          "entries": ["@wblxr408/startup-animation-runtime#startup-animation-guide"]
+        }
+      }
+    },
     "plugins": [
       {
         "id": "ext:@wblxr408/startup-animation-runtime/main",
